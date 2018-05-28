@@ -2,7 +2,7 @@
 
 Ruby Gem to Allow Safe Accessing a la Java Optionals.
 
-In ruby 2.2+, the safe access operator `&.` prevents `NilClass::NoMethodErrors`, but no such feature exists in prior versions.
+In Ruby 2.3+, the safe access operator `&.` prevents `NilClass::NoMethodError`, but no such feature exists in prior versions. This gem aims to provide a cross-version compatible solution.
 
 ## Installation
 
