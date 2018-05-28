@@ -6,11 +6,13 @@ require 'test/unit'
 class TestQuery < Test::Unit::TestCase
   def testOptional
     str = "Hello"
-    assert_equal str.optional().else(3), "Hello"
+    assert_equal str.optional().else(""), "Hello"
+    assert_equal str.optional().length().else(0), 5
   end
 
   def testNil
-    null = nil
-    assert_equal null.optional().else(3), 3
+    str = nil
+    assert_equal str.optional().else(""), ""
+    assert_equal str.optional().length().else(0), 0
   end
 end
